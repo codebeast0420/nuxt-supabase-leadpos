@@ -1,0 +1,8 @@
+{
+    "admin": {
+        "text_snippet": {
+            "name": "Name",
+            "key": "Key"
+        }
+    }
+}

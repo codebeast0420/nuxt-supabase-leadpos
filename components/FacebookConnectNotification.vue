@@ -1,0 +1,4 @@
+<template>
+    <FacebookConnectAccountAlert />
+    <FacebookSelectPageModal />
+</template>

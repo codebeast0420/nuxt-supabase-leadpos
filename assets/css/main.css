@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v12-latin-regular.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/inter-v12-latin-regular.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* inter-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/inter-v12-latin-500.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/inter-v12-latin-500.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/inter-v12-latin-600.woff2') format('woff2'),
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        url('../fonts/inter-v12-latin-600.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+
+@layer base {
+    h1, h2 {
+        @apply leading-tight;
+    }
+
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-large font-semibold;
+    }
+
+    a {
+        @apply text-blue hover:underline;
+    }
+
+    small {
+        @apply text-sm;
+    }
+}
+
+@layer components {
+    .btn {
+        @apply inline-flex items-center rounded-lg justify-center hover:no-underline px-3 py-2 disabled:opacity-70 h-[42px] text-body;
+    }
+
+    .btn-light {
+        @apply bg-white;
+        box-shadow: 0 0 0 1px rgba(9, 25, 72, 0.13), 0 1px 2px 0 rgba(18, 55, 105, 0.08);
+    }
+
+    .btn-primary {
+        @apply border-solid border-t-primary-light border-l-primary-light border-r-primary-light border-b-primary shadow-[0px_0px_0px_1px_#fa5c4c] bg-primary bg-cover  bg-blend-normal bg-no-repeat border text-white outline-primary text-white;
+        background-position: 50% 50%;
+        background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    .btn-danger {
+        @apply bg-red-600 hover:bg-red-500 text-white;
+    }
+
+    .form-side-by-side {
+        @apply flex space-x-4;
+    }
+
+    .form-side-by-side > * {
+        @apply flex-auto;
+    }
+}
+
+.formkit-tags .formkit-input:focus {
+    box-shadow: none!important;
+}
